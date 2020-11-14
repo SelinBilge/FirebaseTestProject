@@ -56,14 +56,13 @@ class SignInActivity : AppCompatActivity(){
         super.onActivityResult(requestCode, resultCode, data)
 
 
-
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
 
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             val exception = task.exception
 
-            if (task.isSuccessful){
+            if (task.isSuccessful) {
 
                 try {
                     // Google Sign In was successful, authenticate with Firebase
